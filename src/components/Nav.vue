@@ -35,7 +35,7 @@ import { RouterLink } from 'vue-router';
 <style scoped lang="scss">
 .nav-item {
     color: black;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
     transition: .3s;
     margin: 0 6px;
