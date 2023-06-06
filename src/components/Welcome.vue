@@ -13,11 +13,21 @@
 .welcome-container {
     display: flex;
     text-align: center;
-    width: 1000px;
+    width: 100%;
     margin: auto;
 }
 
 .summary {
     letter-spacing: 3px;
+}
+
+@media (max-width: 768px) {
+    .welcome-container {
+        font-size: 25px;
+    }
+
+    .summary {
+        letter-spacing: 1px;
+    }
 }
 </style>

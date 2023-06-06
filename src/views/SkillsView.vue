@@ -147,13 +147,8 @@ p {
 }
 
 @media (max-width: 768px) {
-    .waves {
-        height: 40px;
-        min-height: 40px;
-    }
-
-    h1 {
-        font-size: 24px;
+    body {
+        background-color: white !important;
     }
 }
 </style>

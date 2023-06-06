@@ -5,10 +5,10 @@ import Welcome from '../components/Welcome.vue';
 <template>
   <div class="wrapper">
     <header>
-      <video autoplay loop muted id="bgVid" class="background">
-        <source src="../../Videos/blueVid.mp4" type="video/mp4" />
+      <video autoplay loop muted playsinline style="pointer-events: none;" id="bgVid" class="background">
+        <source src="../../videos/blueVid.mp4" type="video/mp4" />
       </video>
-      <img src="../../Images/computer.png" class="foreground">
+      <img src="../../images/computer.png" class="foreground">
       <h1 class="title">Welcome</h1>
     </header>
     <section>
@@ -76,7 +76,6 @@ header {
   font-size: 7rem;
   color: white;
   text-shadow: 0 0 5px black;
-  ;
 }
 
 section {
@@ -96,5 +95,11 @@ h3,
 h4 {
   text-align: center;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 5rem;
+  }
 }
 </style>
