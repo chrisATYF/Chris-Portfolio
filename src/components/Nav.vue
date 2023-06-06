@@ -3,25 +3,36 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-    <nav class="nav" role="navigation">
-        <RouterLink class="nav-item" to="/">Home</RouterLink>
-        <RouterLink class="nav-item" to="/skills">Skills</RouterLink>
-        <RouterLink class="nav-item" to="/experience">Experience</RouterLink>
-        <RouterLink class="nav-item" to="/education">Education</RouterLink>
-        <RouterLink class="nav-item" to="/contact">Contact</RouterLink>
-        <span class="nav-indicator"></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <RouterLink class="nav-item" to="/">Home</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-item" to="/skills">Skills</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-item" to="/experience">Experience</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-item" to="/education">Education</RouterLink>
+                    </li>
+                    <li class="nav-item">
+                        <RouterLink class="nav-item" to="/contact">Contact</RouterLink>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 </template>
 
 <style scoped lang="scss">
-.nav {
-    display: inline-flex;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    background-color: white;
-}
-
 .nav-item {
     color: black;
     padding: 20px;
@@ -56,16 +67,5 @@ import { RouterLink } from 'vue-router';
 
 .nav-item:not(.is-active):hover {
     color: #333;
-}
-
-.nav-indicator {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 4px;
-    transition: .4s;
-    height: 5px;
-    z-index: 1;
-    border-radius: 8px 8px 0 0;
 }
 </style>
