@@ -162,7 +162,7 @@ p {
     }
 
     .exp-container {
-        margin-bottom: 65px;
+        margin-bottom: 85px;
     }
 }
 </style>
