@@ -28,6 +28,7 @@
 
     .summary {
         letter-spacing: 1px;
+        margin-bottom: 55px;
     }
 }
 </style>
