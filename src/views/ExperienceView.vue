@@ -160,5 +160,9 @@ p {
     body {
         background-color: white !important;
     }
+
+    .exp-container {
+        margin-bottom: 65px;
+    }
 }
 </style>

@@ -28,7 +28,7 @@
 
     .summary {
         letter-spacing: 1px;
-        margin-bottom: 55px;
+        margin-bottom: 65px;
     }
 }
 </style>
