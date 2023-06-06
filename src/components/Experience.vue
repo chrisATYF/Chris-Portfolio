@@ -118,4 +118,14 @@ p {
         opacity: 1;
     }
 }
+
+@media (max-width: 768px) {
+
+    .first-exp,
+    .second-exp,
+    .third-exp {
+        margin: 0;
+        box-shadow: 0px 0px 0px 0px white;
+    }
+}
 </style>

@@ -154,5 +154,12 @@ p {
     body {
         background-color: white !important;
     }
+
+    .inner-header {
+        height: 100%;
+        padding-top: 55px;
+        letter-spacing: 1rem;
+        font-size: small;
+    }
 }
 </style>
