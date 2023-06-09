@@ -44,6 +44,7 @@ a {
 @media (max-width: 768px) {
     .container {
         margin: auto;
+        padding: 25px 0;
     }
 
     h3,

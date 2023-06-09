@@ -49,6 +49,10 @@ a {
     a {
         font-size: 20px;
     }
+
+    .school {
+        padding: 25px 0;
+    }
 }
 
 @media (max-width: 420px) {
@@ -58,6 +62,11 @@ a {
     p,
     a {
         font-size: 10px;
+    }
+
+    .school {
+        margin: auto;
+        padding: 10px 0;
     }
 }
 </style>

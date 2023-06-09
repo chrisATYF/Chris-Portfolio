@@ -114,13 +114,21 @@ section {
   padding: 15px;
 }
 
+.skills-heading {
+  background-color: rgba(46, 46, 46, 0.763);
+  color: white;
+}
+
 .skills-heading,
 .edu-heading {
-  background-color: rgba(46, 46, 46, 0.763);
   padding: 50px 200px;
   border-radius: 25px;
-  color: white;
   letter-spacing: 2px;
+}
+
+.edu-heading {
+  background-color: rgba(255, 255, 255, 0.763);
+  color: black;
 }
 
 .skills-img,
@@ -139,7 +147,7 @@ section {
 }
 
 .edu-img {
-  background-image: url('../../images/birds.png');
+  background-image: url('../../images/eduBg.jpg');
 }
 
 h3,
@@ -153,9 +161,13 @@ h4 {
     font-size: 5rem;
   }
 
-  .skills-heading,
-  .edu-heading {
+  .skills-heading {
     padding: 50px 100px;
+    letter-spacing: 2px;
+  }
+
+  .edu-heading {
+    padding: 50px 70px;
     letter-spacing: 2px;
   }
 
