@@ -153,7 +153,8 @@ h4 {
     font-size: 5rem;
   }
 
-  .skills-heading {
+  .skills-heading,
+  .edu-heading {
     padding: 50px 100px;
     letter-spacing: 2px;
   }
