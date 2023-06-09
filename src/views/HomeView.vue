@@ -158,5 +158,11 @@ h4 {
     padding: 50px 100px;
     letter-spacing: 2px;
   }
+
+  .skills-img,
+  .edu-img {
+
+    background-attachment: scroll;
+  }
 }
 </style>
