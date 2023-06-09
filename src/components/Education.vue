@@ -61,11 +61,12 @@ a {
     h4,
     p,
     a {
-        font-size: 10px;
+        font-size: 15px;
     }
 
     .school {
         margin: auto;
+        margin-bottom: 25px;
         padding: 10px 0;
     }
 }

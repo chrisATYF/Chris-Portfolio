@@ -14,7 +14,7 @@ h4,
 p,
 a {
     text-align: center;
-    color: black;
+    color: white;
     letter-spacing: 3px;
     text-decoration: none;
 }

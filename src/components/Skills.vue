@@ -61,7 +61,7 @@ a {
     h4,
     p,
     a {
-        font-size: 10px;
+        font-size: 15px;
     }
 }
 </style>
