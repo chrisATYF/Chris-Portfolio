@@ -1,5 +1,7 @@
 <script setup>
 import Welcome from '../components/Welcome.vue';
+import Skills from '../components/Skills.vue';
+import Education from '../components/Education.vue'
 </script>
 
 <template>
@@ -16,6 +18,18 @@ import Welcome from '../components/Welcome.vue';
         <h3>Web Developer</h3>
         <Welcome></Welcome>
       </div>
+      <div class="skills-area">
+        <div class="skills-img">
+          <h3 class="skills-heading">Skills</h3>
+        </div>
+        <Skills></Skills>
+      </div>
+      <div class="edu-area">
+        <div class="edu-img">
+          <h3 class="edu-heading">Education</h3>
+        </div>
+        <Education></Education>
+      </div>
     </section>
   </div>
 </template>
@@ -26,7 +40,7 @@ body {
 }
 
 .wrapper::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.8em;
 }
 
 .wrapper::-webkit-scrollbar-track {
@@ -51,11 +65,13 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   transform-style: preserve-3d;
   z-index: -1;
 }
 
 .background {
+  object-fit: fill;
   transform: translateZ(-10px) scale(2);
 }
 
@@ -73,6 +89,7 @@ header {
 }
 
 .title {
+  padding: 100px;
   font-size: 7rem;
   color: white;
   text-shadow: 0 0 5px black;
@@ -91,6 +108,40 @@ section {
   padding: 15px;
 }
 
+.skills-area,
+.edu-area {
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.skills-heading,
+.edu-heading {
+  background-color: rgba(46, 46, 46, 0.763);
+  padding: 50px 200px;
+  border-radius: 25px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.skills-img,
+.edu-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('../../images/background.jpg');
+  min-height: 400px;
+  border-radius: 25px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.edu-img {
+  background-image: url('../../images/birds.png');
+}
+
 h3,
 h4 {
   text-align: center;
@@ -100,6 +151,11 @@ h4 {
 @media (max-width: 768px) {
   .title {
     font-size: 5rem;
+  }
+
+  .skills-heading {
+    padding: 50px 100px;
+    letter-spacing: 2px;
   }
 }
 </style>

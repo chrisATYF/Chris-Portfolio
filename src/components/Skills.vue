@@ -8,3 +8,36 @@
             Aginity DB, Supabase, RESTful APIs, Cloud Architecture, Microsoft Office</p>
     </div>
 </template>
+
+<style scoped>
+h3,
+h4,
+p,
+a {
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.container {
+    margin: 25px;
+    padding: 25px;
+    text-align: center;
+    animation: fade-in 2s;
+}
+
+a {
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+</style>

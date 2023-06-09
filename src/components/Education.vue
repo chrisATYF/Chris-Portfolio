@@ -16,7 +16,7 @@ p,
 a {
     text-align: center;
     color: black;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-decoration: none;
 }
 
