@@ -171,9 +171,9 @@ h4 {
     letter-spacing: 2px;
   }
 
-  /* .skills-img,
+  .skills-img,
   .edu-img {
     background-attachment: scroll;
-  } */
+  }
 }
 </style>
