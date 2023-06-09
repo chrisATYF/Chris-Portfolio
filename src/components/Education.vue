@@ -66,7 +66,7 @@ a {
 
     .school {
         margin: auto;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
         padding: 10px 0;
     }
 }
