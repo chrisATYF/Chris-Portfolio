@@ -23,12 +23,22 @@
 
 @media (max-width: 768px) {
     .welcome-container {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .summary {
         letter-spacing: 1px;
         margin-bottom: 65px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    h3,
+    h4,
+    p,
+    a {
+        font-size: 10px;
     }
 }
 </style>

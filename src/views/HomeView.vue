@@ -161,7 +161,6 @@ h4 {
 
   .skills-img,
   .edu-img {
-
     background-attachment: scroll;
   }
 }

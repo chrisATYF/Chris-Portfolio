@@ -40,4 +40,24 @@ a {
         opacity: 1;
     }
 }
+
+@media (max-width: 768px) {
+
+    h3,
+    h4,
+    p,
+    a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    h3,
+    h4,
+    p,
+    a {
+        font-size: 10px;
+    }
+}
 </style>
