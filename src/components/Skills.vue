@@ -21,6 +21,9 @@ a {
 }
 
 .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
     margin: 25px;
     padding: 25px;
     text-align: center;
