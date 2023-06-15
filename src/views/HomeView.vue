@@ -1,16 +1,22 @@
 <script setup>
 import Welcome from '../components/Welcome.vue';
 import Skills from '../components/Skills.vue';
-import Education from '../components/Education.vue'
+import Education from '../components/Education.vue';
+import { supabase } from '../supabase.js';
+
+const foregroundImg = "../../images/computer.png"
+const backgroundVid = "../../videos/blueVid.mp4"
+const skillImg = "../../images/background.jpg"
+const eduImg = "../../images/eduBg.jpg"
 </script>
 
 <template>
   <div class="wrapper">
     <header>
       <video autoplay loop muted playsinline style="pointer-events: none;" id="bgVid" class="background">
-        <source src="../../videos/blueVid.mp4" type="video/mp4" />
+        <source :src="backgroundVid" type="video/mp4" />
       </video>
-      <img src="../../images/computer.png" class="foreground">
+      <img :src="foregroundImg" class="foreground">
       <h1 class="title">Welcome</h1>
     </header>
     <section>
@@ -19,13 +25,13 @@ import Education from '../components/Education.vue'
         <Welcome></Welcome>
       </div>
       <div class="skills-area">
-        <div class="skills-img">
+        <div class="skills-img" v-bind:style="{ 'background-image': 'url(' + skillImg + ')' }">
           <h3 class="skills-heading">Skills</h3>
         </div>
         <Skills></Skills>
       </div>
       <div class="edu-area">
-        <div class="edu-img">
+        <div class="edu-img" v-bind:style="{ 'background-image': 'url(' + eduImg + ')' }">
           <h3 class="edu-heading">Education</h3>
         </div>
         <Education></Education>
@@ -137,7 +143,6 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
-  background-image: url('../../images/background.jpg');
   min-height: 400px;
   border-radius: 25px;
   background-position: center;
@@ -146,9 +151,13 @@ section {
   background-attachment: fixed;
 }
 
+/* .skills-img {
+  background-image: url('../../images/background.jpg');
+}
+
 .edu-img {
   background-image: url('../../images/eduBg.jpg');
-}
+} */
 
 h3,
 h4 {
