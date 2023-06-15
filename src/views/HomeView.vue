@@ -4,10 +4,56 @@ import Skills from '../components/Skills.vue';
 import Education from '../components/Education.vue';
 import { supabase } from '../supabase.js';
 
-const foregroundImg = "../../images/computer.png"
-const backgroundVid = "../../videos/blueVid.mp4"
-const skillImg = "../../images/background.jpg"
-const eduImg = "../../images/eduBg.jpg"
+// const foregroundImg = "../../images/computer.png"
+// const backgroundVid = "../../videos/blueVid.mp4"
+// const skillImg = "../../images/background.jpg"
+// const eduImg = "../../images/eduBg.jpg"
+
+var backgroundVid = ""
+var foregroundImg = ""
+var skillImg = ""
+var eduImg = ""
+
+const fetchBGVid = async () => {
+  const { data } = supabase
+    .storage
+    .from('videos')
+    .getPublicUrl('blueVid.mp4')
+
+  backgroundVid = data.publicUrl
+}
+
+const fetchFGImg = async () => {
+  const { data } = supabase
+    .storage
+    .from('images')
+    .getPublicUrl('computer.png')
+
+  foregroundImg = data.publicUrl
+}
+
+const fetchSkillsImg = async () => {
+  const { data } = supabase
+    .storage
+    .from('images')
+    .getPublicUrl('skillBg.jpg')
+
+  skillImg = data.publicUrl
+}
+
+const fetchEduImg = async () => {
+  const { data } = supabase
+    .storage
+    .from('images')
+    .getPublicUrl('eduBg.jpg')
+
+  eduImg = data.publicUrl
+}
+
+fetchBGVid()
+fetchFGImg()
+fetchSkillsImg()
+fetchEduImg()
 </script>
 
 <template>
@@ -150,14 +196,6 @@ section {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-
-/* .skills-img {
-  background-image: url('../../images/background.jpg');
-}
-
-.edu-img {
-  background-image: url('../../images/eduBg.jpg');
-} */
 
 h3,
 h4 {
