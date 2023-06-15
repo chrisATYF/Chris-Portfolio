@@ -4,11 +4,6 @@ import Skills from '../components/Skills.vue';
 import Education from '../components/Education.vue';
 import { supabase } from '../supabase.js';
 
-// const foregroundImg = "../../images/computer.png"
-// const backgroundVid = "../../videos/blueVid.mp4"
-// const skillImg = "../../images/background.jpg"
-// const eduImg = "../../images/eduBg.jpg"
-
 var backgroundVid = ""
 var foregroundImg = ""
 var skillImg = ""
