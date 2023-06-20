@@ -15,9 +15,6 @@ import { RouterLink } from 'vue-router';
                         <RouterLink class="nav-item" to="/">Home</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <RouterLink class="nav-item" to="/experience">Experience</RouterLink>
-                    </li>
-                    <li class="nav-item">
                         <RouterLink class="nav-item" to="/contact">Contact</RouterLink>
                     </li>
                 </ul>
