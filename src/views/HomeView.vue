@@ -1,6 +1,7 @@
 <script setup>
 import Welcome from '../components/Welcome.vue';
 import Skills from '../components/Skills.vue';
+import AboutMe from '../components/AboutMe.vue';
 import { supabase } from '../supabase.js';
 
 var backgroundVid = ""
@@ -63,16 +64,17 @@ fetchEduImg()
       <div class="main-heading">
         <Welcome></Welcome>
       </div>
+      <div class="edu-area">
+        <div class="edu-img" v-bind:style="{ 'background-image': 'url(' + skillImg + ')' }">
+          <h3 class="edu-heading">How I started coding</h3>
+        </div>
+        <AboutMe></AboutMe>
+      </div>
       <div class="skills-area">
-        <div class="skills-img" v-bind:style="{ 'background-image': 'url(' + skillImg + ')' }">
-          <h3 class="skills-heading">Skills</h3>
+        <div class="skills-img" v-bind:style="{ 'background-image': 'url(' + eduImg + ')' }">
+          <h3 class="skills-heading">How I Built This</h3>
         </div>
         <Skills></Skills>
-      </div>
-      <div class="edu-area">
-        <div class="edu-img" v-bind:style="{ 'background-image': 'url(' + eduImg + ')' }">
-          <h3 class="edu-heading"></h3>
-        </div>
       </div>
     </section>
   </div>
@@ -137,6 +139,7 @@ header {
   font-size: 7rem;
   color: white;
   text-shadow: 0 0 5px black;
+  text-transform: uppercase;
 }
 
 section {
@@ -168,6 +171,7 @@ section {
   padding: 50px 200px;
   border-radius: 25px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .edu-heading {

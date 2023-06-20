@@ -1,7 +1,11 @@
 <template>
     <div class="welcome-container">
         <div class="summary">
-            <p></p>
+            <p>
+                Hello there! My name is Chris McDonald. I have been building web apps for about 5 years and I love
+                the creativity behind web development.
+            </p>
+            <h4 class="title">Skills</h4>
         </div>
     </div>
 </template>
@@ -12,6 +16,11 @@
     text-align: center;
     width: 100%;
     margin: auto;
+}
+
+.title {
+    margin-top: 100px;
+    text-transform: uppercase;
 }
 
 .summary {
