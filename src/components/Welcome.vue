@@ -5,7 +5,7 @@
                 Hello there! My name is Chris McDonald. I have been building web apps for about 5 years and I love
                 the creativity behind web development.
             </p>
-            <h4 class="title">Skills</h4>
+            <!-- <h4 class="title">Skills</h4> -->
         </div>
     </div>
 </template>
