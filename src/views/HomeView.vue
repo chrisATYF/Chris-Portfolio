@@ -1,7 +1,6 @@
 <script setup>
 import Welcome from '../components/Welcome.vue';
 import Skills from '../components/Skills.vue';
-import Education from '../components/Education.vue';
 import { supabase } from '../supabase.js';
 
 var backgroundVid = ""
@@ -62,7 +61,6 @@ fetchEduImg()
     </header>
     <section>
       <div class="main-heading">
-        <h3>Web Developer</h3>
         <Welcome></Welcome>
       </div>
       <div class="skills-area">
@@ -73,9 +71,8 @@ fetchEduImg()
       </div>
       <div class="edu-area">
         <div class="edu-img" v-bind:style="{ 'background-image': 'url(' + eduImg + ')' }">
-          <h3 class="edu-heading">Education</h3>
+          <h3 class="edu-heading"></h3>
         </div>
-        <Education></Education>
       </div>
     </section>
   </div>
