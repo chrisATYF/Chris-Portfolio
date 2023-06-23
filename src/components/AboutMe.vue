@@ -55,6 +55,7 @@ a {
 
     .paragraph {
         font-size: 25px;
+        margin-bottom: 15px;
     }
 }
 </style>
