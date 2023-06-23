@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <p>
+        <p class="paragraph">
             This site was built using the javascript library Vuejs. It uses Supabase which is a PostGreSQL database.
             It also uses the Bootstrap5 library for styling.
         </p>
@@ -45,21 +45,15 @@ a {
         padding: 25px 0;
     }
 
-    h3,
-    h4,
-    p,
-    a {
+    .paragraph {
         font-size: 20px;
     }
 }
 
 @media (max-width: 420px) {
 
-    h3,
-    h4,
-    p,
-    a {
-        font-size: 15px;
+    .paragraph {
+        font-size: 25px;
     }
 }
 </style>

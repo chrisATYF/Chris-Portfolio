@@ -218,5 +218,9 @@ h4 {
   .edu-img {
     background-attachment: scroll;
   }
+
+  .skills-area {
+    margin-bottom: 25px;
+  }
 }
 </style>

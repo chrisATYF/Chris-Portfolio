@@ -1,7 +1,7 @@
 <template>
     <div class="welcome-container">
         <div class="summary">
-            <p>
+            <p class="paragraph">
                 Hello there! My name is Chris McDonald. I have been building web apps for about 5 years and I love
                 the creativity behind web development.
             </p>
@@ -39,12 +39,8 @@
 }
 
 @media (max-width: 420px) {
-
-    h3,
-    h4,
-    p,
-    a {
-        font-size: 15px;
+    .paragraph {
+        font-size: 25px;
     }
 }
 </style>
