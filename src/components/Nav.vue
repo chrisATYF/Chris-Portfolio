@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import { RouterLink } from 'vue-router';
 </script>
 
@@ -26,40 +26,12 @@ import { RouterLink } from 'vue-router';
     </nav>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .nav-item {
     color: black;
     padding: 10px;
     text-decoration: none;
-    transition: .3s;
     margin: 0 6px;
-    z-index: 1;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 500;
-    position: relative;
     letter-spacing: 2px;
-
-    &:before {
-        content: "";
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        background-color: black;
-        border-radius: 8px 8px 0 0;
-        opacity: 0;
-        transition: .3s;
-    }
-}
-
-.nav-item:not(.is-active):hover:before {
-    opacity: 1;
-    bottom: 0;
-}
-
-
-.nav-item:not(.is-active):hover {
-    color: #333;
 }
 </style>
