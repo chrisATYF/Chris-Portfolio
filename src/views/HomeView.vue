@@ -220,7 +220,7 @@ h4 {
   }
 
   .skills-area {
-    margin-bottom: 25px;
+    margin-bottom: 45px;
   }
 }
 </style>
