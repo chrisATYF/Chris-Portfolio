@@ -13,5 +13,6 @@ import Nav from "./components/Nav.vue"
 <style>
 body {
   overflow: hidden;
+  margin-bottom: 25px;
 }
 </style>
