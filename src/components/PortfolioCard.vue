@@ -7,7 +7,7 @@ const fetchNMPhotoImg = async () => {
     const { data: nMPhotoData } = supabase
         .storage
         .from('images')
-        .getPublicUrl('novaMaeSite.png')
+        .getPublicUrl('Header.jpg')
 
     nMPhotoImg = nMPhotoData.publicUrl
 }
