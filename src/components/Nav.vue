@@ -99,15 +99,12 @@ const toggleInput = () => {
 }
 
 .nav {
-    /* New Add */
     display: block;
     width: 100%;
     height: 100%;
-    /* position: fixed; */
     background-color: var(--black);
     overflow: hidden;
     max-height: 0;
-    /* transition: max-height .5s ease-out; */
 }
 
 .menu a {
