@@ -118,6 +118,7 @@ header {
 
 .background {
   object-fit: fill;
+  width: 100%;
   transform: translateZ(-10px) scale(2);
 }
 
@@ -129,7 +130,6 @@ header {
 .foreground {
   position: absolute;
   height: 100%;
-  width: 100%;
   object-fit: cover;
   z-index: -1;
 }
