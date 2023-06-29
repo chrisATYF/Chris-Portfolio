@@ -33,7 +33,8 @@ fetchNMPhotoImg()
                     <p class="card-text">
                         This is a photography website I built using VueJs, Bootstrap, and Supabase.
                     </p>
-                    <a href="https://novamaephotography.netlify.app/" type="button" class="btn btn-light" target="_blank">Go
+                    <a href="https://novamaephotography.netlify.app/" type="button" class="btn btn-light btn-lg"
+                        target="_blank">Go
                         There</a>
                 </div>
             </div>
