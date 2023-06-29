@@ -26,18 +26,20 @@ fetchNMPhotoImg()
 <template>
     <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
-            <div class="card">
-                <img :src="nMPhotoImg" class="card-img-top" alt="Photography Image">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Nova Mae Photography</h5>
-                    <p class="card-text">
-                        This is a photography website I built using VueJs, Bootstrap, and Supabase.
-                    </p>
-                    <a href="https://novamaephotography.netlify.app/" type="button" class="btn btn-light btn-lg"
-                        target="_blank">Go
-                        There</a>
+            <a href="https://novamaephotography.netlify.app/" style="cursor: pointer; text-decoration: none;"
+                target="_blank">
+                <div class="card">
+                    <img :src="nMPhotoImg" class="card-img-top" alt="Photography Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Nova Mae Photography</h5>
+                        <p class="card-text">
+                            This is a photography website I built for a client using VueJs, Bootstrap, and Supabase.
+                            Supabase contains all images for the site. Bootstrap was used in creating the navbar
+                            and will be used to display specific photo sessions upon the next release.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
         <div class="col">
             <div class="card">
@@ -45,7 +47,9 @@ fetchNMPhotoImg()
                 <div class="card-body text-center">
                     <h5 class="card-title">Lighthouse ~ <span style="color: red;"><i>Coming soon..</i></span></h5>
                     <p class="card-text">
-                        Built using ASP.Net Core and Bootstrap
+                        Built using ASP.Net Core and Bootstrap. This site was originally created in ASP.Net and is
+                        being converted to .Net Core. It will be using MongoDB as the database, but currently it is
+                        being developed using SSMS (SQL Server Management Studio).
                     </p>
                 </div>
             </div>

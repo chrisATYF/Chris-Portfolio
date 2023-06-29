@@ -4,7 +4,8 @@
         <p>Sherwood, AR 72120</p>
         <p>(501) 765-2757</p>
         <p>chris.developer009@gmail.com</p>
-        <a href="https://github.com/chrisATYF">My GitHub</a>
+        <a class="btn btn-lg btn-outline-light" href="https://github.com/chrisATYF" role="button" target="_blank">To My
+            GitHub</a>
     </div>
 </template>
 
