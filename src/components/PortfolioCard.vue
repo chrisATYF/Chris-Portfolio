@@ -2,6 +2,7 @@
 import { supabase } from '../supabase'
 
 var nMPhotoImg = ""
+var lHPhotoImg = ""
 
 const fetchNMPhotoImg = async () => {
     const { data: nMPhotoData } = supabase
@@ -10,58 +11,52 @@ const fetchNMPhotoImg = async () => {
         .getPublicUrl('Header.jpg')
 
     nMPhotoImg = nMPhotoData.publicUrl
+
+    const { data: lHPhotoData } = supabase
+        .storage
+        .from('images')
+        .getPublicUrl('lighthouse.png')
+
+    lHPhotoImg = lHPhotoData.publicUrl
 }
 
 fetchNMPhotoImg()
 </script>
 
 <template>
-    <div class="portfolio-sites">
-        <a class="card-link" href="https://novamaephotography.netlify.app/" target="_blank">
-            <div class="site-card">
-                <img class="web-img" :src="nMPhotoImg" />
-                <div class="card-text">
-                    <p>Nova Mae Photography</p>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+            <div class="card">
+                <img :src="nMPhotoImg" class="card-img-top" alt="Photography Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Nova Mae Photography</h5>
+                    <p class="card-text">
+                        This is a photography website I built using VueJs, Bootstrap, and Supabase.
+                    </p>
+                    <a href="https://novamaephotography.netlify.app/" type="button" class="btn btn-light" target="_blank">Go
+                        There</a>
                 </div>
             </div>
-        </a>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img :src="lHPhotoImg" class="card-img-top" alt="Lighthouse Image">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Lighthouse ~ <span style="color: red;"><i>Coming soon..</i></span></h5>
+                    <p class="card-text">
+                        Built using ASP.Net Core and Bootstrap
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col">
+            <div class="card">
+                <img :src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text"></p>
+                </div>
+            </div>
+        </div> -->
     </div>
 </template>
-
-<style scoped>
-.portfolio-sites {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.site-card {
-
-    background-color: lightgray;
-    border-radius: 15px;
-    box-shadow: 0px 0px 3px 3px darkgray;
-}
-
-.web-img {
-    padding: 5px;
-    height: 250px;
-    object-fit: contain;
-    border-radius: 15px;
-}
-
-.card-text {
-    text-align: center;
-}
-
-.card-link {
-    text-decoration: none;
-    color: black;
-}
-
-@media (max-width: 524px) {
-    .web-img {
-        height: 200px;
-    }
-}
-</style>

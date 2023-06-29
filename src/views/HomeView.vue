@@ -161,20 +161,12 @@ section {
   padding: 15px;
 }
 
-.skills-heading {
-  background-color: rgba(46, 46, 46, 0.763);
-  color: white;
-}
-
 .skills-heading,
 .edu-heading {
   padding: 50px 200px;
   border-radius: 25px;
   letter-spacing: 2px;
   text-transform: uppercase;
-}
-
-.edu-heading {
   background-color: rgba(255, 255, 255, 0.763);
   color: black;
 }
