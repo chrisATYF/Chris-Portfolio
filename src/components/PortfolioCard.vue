@@ -35,7 +35,8 @@ fetchNMPhotoImg()
                         <p class="card-text">
                             This is a photography website I built for a client using VueJs, Bootstrap, and Supabase.
                             Supabase contains all images for the site. Bootstrap was used in creating the navbar
-                            and will be used to display specific photo sessions upon the next release.
+                            and will be used to display specific photo sessions upon the next release. Click this card
+                            to visit.
                         </p>
                     </div>
                 </div>
