@@ -124,6 +124,7 @@ header {
 
 .foreground {
   transform: translateZ(-5px) scale(1.5);
+  animation: fade-in 2.5s;
 }
 
 .background,
@@ -189,6 +190,16 @@ h3,
 h4 {
   text-align: center;
   color: black;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
