@@ -61,3 +61,19 @@ fetchNMPhotoImg()
         </div> -->
     </div>
 </template>
+
+<style scoped>
+.card {
+    animation: fade-in 2.5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+</style>
