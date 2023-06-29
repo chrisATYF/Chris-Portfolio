@@ -4,10 +4,13 @@ import Nav from "./components/Nav.vue"
 </script>
 
 <template>
-  <main>
-    <Nav></Nav>
-    <RouterView />
-  </main>
+  <div>
+    <main>
+      <Nav></Nav>
+      <RouterView />
+    </main>
+    <footer>&copy; Copyright 2023 Chris McDonald</footer>
+  </div>
 </template>
 
 <style>
@@ -16,5 +19,14 @@ import Nav from "./components/Nav.vue"
 body {
   font-family: "Poppins", sans-serif;
   overflow: hidden;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 </style>

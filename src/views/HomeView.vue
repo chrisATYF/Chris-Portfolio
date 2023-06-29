@@ -69,7 +69,6 @@ fetchDB()
       </div>
     </section>
   </div>
-  <footer class="page-footer">&copy; Copyright 2023 Chris McDonald</footer>
 </template>
 
 <style scoped>
@@ -91,7 +90,7 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  height: calc(100vh - 100px);
   overflow: auto;
   overflow-x: hidden;
   perspective: 10px;
@@ -213,9 +212,5 @@ h4 {
   .edu-img {
     background-attachment: scroll;
   }
-
-  /* .skills-area {
-    margin-bottom: 65px;
-  } */
 }
 </style>
