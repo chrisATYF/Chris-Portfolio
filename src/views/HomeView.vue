@@ -9,46 +9,37 @@ var foregroundImg = ""
 var skillImg = ""
 var eduImg = ""
 
-const fetchBGVid = async () => {
-  const { data } = supabase
+const fetchDB = async () => {
+  const { data: bgVid } = supabase
     .storage
     .from('videos')
     .getPublicUrl('blueVid.mp4')
 
-  backgroundVid = data.publicUrl
-}
+  backgroundVid = bgVid.publicUrl
 
-const fetchFGImg = async () => {
-  const { data } = supabase
+  const { data: fgImg } = supabase
     .storage
     .from('images')
     .getPublicUrl('computer.png')
 
-  foregroundImg = data.publicUrl
-}
+  foregroundImg = fgImg.publicUrl
 
-const fetchSkillsImg = async () => {
-  const { data } = supabase
+  const { data: skillImgData } = supabase
     .storage
     .from('images')
     .getPublicUrl('skillBg.jpg')
 
-  skillImg = data.publicUrl
-}
+  skillImg = skillImgData.publicUrl
 
-const fetchEduImg = async () => {
-  const { data } = supabase
+  const { data: eduImgData } = supabase
     .storage
     .from('images')
     .getPublicUrl('eduBg.jpg')
 
-  eduImg = data.publicUrl
+  eduImg = eduImgData.publicUrl
 }
 
-fetchBGVid()
-fetchFGImg()
-fetchSkillsImg()
-fetchEduImg()
+fetchDB()
 </script>
 
 <template>
@@ -78,6 +69,7 @@ fetchEduImg()
       </div>
     </section>
   </div>
+  <footer class="page-footer">&copy; Copyright 2023 Chris McDonald</footer>
 </template>
 
 <style scoped>
@@ -222,8 +214,8 @@ h4 {
     background-attachment: scroll;
   }
 
-  .skills-area {
-    margin-bottom: 45px;
-  }
+  /* .skills-area {
+    margin-bottom: 65px;
+  } */
 }
 </style>
