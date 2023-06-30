@@ -54,7 +54,7 @@ a {
 @media (max-width: 420px) {
 
     .paragraph {
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 </style>
