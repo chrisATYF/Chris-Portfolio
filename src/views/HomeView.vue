@@ -203,6 +203,10 @@ blockquote p {
     grid-column: 2 / span 10;
   }
 
+  h1 {
+    font-size: 1rem;
+  }
+
   blockquote p {
     font-size: 2rem;
   }
