@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 import WorkHistory from '../components/WorkHistory.vue';
 import AboutMe from '../components/AboutMe.vue';
 import Projects from '../components/Projects.vue';
@@ -43,7 +44,7 @@ scene.background = bgTexture;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  let initialSet = 10;
+  let initialSet = 15;
 
   camera.position.z = t * -0.01 + initialSet;
   camera.position.x = t * -0.0002;
@@ -92,6 +93,9 @@ animate();
     </section>
     <blockquote>
       <p>Thank you for visiting my site!</p>
+      <RouterLink to="/skills" id="skill-btn" class="btn btn-outline-dark btn-lg">
+        Click to view my skills
+      </RouterLink>
     </blockquote>
   </main>
 </template>
@@ -137,6 +141,7 @@ header {
   margin-bottom: var(--space);
   opacity: var(--transparency);
   border-radius: var(--radius);
+  backdrop-filter: blur(20px);
 }
 
 section {
@@ -148,6 +153,7 @@ section {
   margin-bottom: var(--space);
   opacity: var(--transparency);
   border-radius: var(--radius);
+  backdrop-filter: blur(20px);
 }
 
 blockquote {
@@ -159,6 +165,7 @@ blockquote {
   margin-bottom: var(--space);
   border-radius: var(--radius);
   opacity: var(--transparency);
+  backdrop-filter: blur(20px);
 }
 
 blockquote p {
@@ -169,6 +176,10 @@ blockquote p {
 
 .left {
   grid-column: 6 / 12;
+}
+
+#skill-btn {
+  margin-top: 25px;
 }
 
 @media (max-width: 940px) {
