@@ -1,9 +1,9 @@
 <template>
     <div class="container">
         <p class="paragraph">
-            I got started in coding around 2018. I went to a coding bootcamp hosted by the University of Central
-            Arkansas called the Arkansas Coding Academy. It was a 6 month course called C#/SQL Web Development. We
-            built web apps using the ASP.Net framework.
+            This website was built using Vuejs. Threejs is used to create the background object on the home page.
+            This site uses Supabase, a Firebase alternative, for storing and retrieving data. Also, for some of
+            the styling Bootstrap5 is used.
         </p>
     </div>
 </template>

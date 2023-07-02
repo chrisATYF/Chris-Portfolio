@@ -4,29 +4,31 @@ import Nav from "./components/Nav.vue"
 </script>
 
 <template>
-  <div>
-    <main>
-      <Nav></Nav>
-      <RouterView />
-    </main>
-    <footer>&copy; Copyright 2023 Chris McDonald</footer>
-  </div>
+  <Nav class="nav"></Nav>
+  <RouterView></RouterView>
 </template>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
-body {
-  font-family: "Poppins", sans-serif;
-  overflow: hidden;
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --space: 200px;
+  --radius: 25px;
+  --transparency: 0.8;
+  font-weight: 400;
+  font-style: normal;
 }
 
-footer {
-  position: absolute;
+body {
+  overflow-x: hidden;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
   left: 0;
-  bottom: 0;
   width: 100%;
-  text-align: center;
-  background-color: white;
+  background-color: #f0f0f0;
+  padding: 10px;
+  z-index: 9999;
 }
 </style>

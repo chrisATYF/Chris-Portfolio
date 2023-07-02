@@ -1,216 +1,215 @@
 <script setup>
-import Welcome from '../components/Welcome.vue';
-import Skills from '../components/Skills.vue';
-import AboutMe from '../components/AboutMe.vue';
-import { supabase } from '../supabase.js';
+import {
+  Scene, PerspectiveCamera, WebGLRenderer, TorusKnotGeometry, MeshStandardMaterial, Mesh, PointLight, AmbientLight,
+  TextureLoader
+} from 'three';
+import { ref, onMounted } from 'vue';
 
-var backgroundVid = ""
-var foregroundImg = ""
-var skillImg = ""
-var eduImg = ""
+const background = ref(null);
+const scene = new Scene();
+const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+let renderer;
 
-const fetchDB = async () => {
-  const { data: bgVid } = supabase
-    .storage
-    .from('videos')
-    .getPublicUrl('blueVid.mp4')
+camera.position.setZ(30);
+camera.position.setX(-3);
 
-  backgroundVid = bgVid.publicUrl
+onMounted(() => {
+  renderer = new WebGLRenderer({
+    canvas: background.value
+  });
 
-  const { data: fgImg } = supabase
-    .storage
-    .from('images')
-    .getPublicUrl('computer.png')
+  renderer.setPixelRatio(devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.render(scene, camera);
+});
 
-  foregroundImg = fgImg.publicUrl
+const geometry = new TorusKnotGeometry(9.025, 2.7027, 300, 20, 2);
+const material = new MeshStandardMaterial({ color: 0x96d4f3 });
+const torusKnot = new Mesh(geometry, material);
+scene.add(torusKnot);
 
-  const { data: skillImgData } = supabase
-    .storage
-    .from('images')
-    .getPublicUrl('skillBg.jpg')
+const pointLight = new PointLight(0xffffff);
+pointLight.position.set(5, 5, 5);
 
-  skillImg = skillImgData.publicUrl
+const ambientLight = new AmbientLight(0xffffff);
+scene.add(pointLight, ambientLight);
 
-  const { data: eduImgData } = supabase
-    .storage
-    .from('images')
-    .getPublicUrl('eduBg.jpg')
+const bgTexture = new TextureLoader()
+  .load('https://images.pexels.com/photos/7130544/pexels-photo-7130544.jpeg?auto=compress&cs=tinysrgb&w=400');
+scene.background = bgTexture;
 
-  eduImg = eduImgData.publicUrl
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
+  let initialSet = 10;
+
+  camera.position.z = t * -0.01 + initialSet;
+  camera.position.x = t * -0.0002;
+  camera.position.y = t * -0.0002;
 }
 
-fetchDB()
+document.body.onscroll = moveCamera;
+moveCamera();
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  torusKnot.rotation.x += 0.01;
+  torusKnot.rotation.y += 0.005;
+  torusKnot.rotation.z += 0.01;
+
+  if (renderer) {
+    renderer.render(scene, camera);
+  }
+}
+
+animate();
 </script>
 
 <template>
-  <div class="wrapper">
+  <canvas ref="background"></canvas>
+  <main>
     <header>
-      <video autoplay loop muted playsinline style="pointer-events: none;" id="bgVid" class="background">
-        <source :src="backgroundVid" type="video/mp4" />
-      </video>
-      <img :src="foregroundImg" class="foreground">
-      <h1 class="title">Welcome</h1>
+      <h1>🎸 Chris McDonald 🎸</h1>
+      <p>Welcome to my portfolio</p>
     </header>
+    <blockquote>
+      <p>"Because the world will never take my heart" - MCR</p>
+    </blockquote>
     <section>
-      <div class="main-heading">
-        <Welcome></Welcome>
-      </div>
-      <div class="edu-area">
-        <div class="edu-img" v-bind:style="{ 'background-image': 'url(' + skillImg + ')' }">
-          <h3 class="edu-heading">How I started coding</h3>
-        </div>
-        <AboutMe></AboutMe>
-      </div>
-      <div class="skills-area">
-        <div class="skills-img" v-bind:style="{ 'background-image': 'url(' + eduImg + ')' }">
-          <h3 class="skills-heading">How I Built This</h3>
-        </div>
-        <Skills></Skills>
-      </div>
+      <h2>About me</h2>
+      <p>
+        I am a musician and have been one for 16 years. My instrument of choice is the guitar, but I can play piano,
+        drums, mandolin and whatever instrument I need to play to get the job done!
+      </p>
+      <p>
+        I first started building websites about 6 years ago after my dad suggested I look into a coding bootcamp
+        called the Arkansas Coding Academy. I went ahead and paid the money to attend and I loved it from the start.
+        The program was a 6-month course focusing on C#/SQL Web Development. By the end of the class we were very
+        proficient in building fully funcitonal web apps using the ASP.Net framework.
+      </p>
+      <p>
+        After a lot of work trying to get a job in the industry I finally got my break with a company called
+        Merkle, Inc. I started as an intern before finally being hired on in a full position as a DevOps Developer.
+        Sadly, after the events of 2020 and COVID-19 I was laid off from Merkle, Inc. After that I decided to
+        focus on creating music and focusing on learning about the Bible and returning to university. Now, I am
+        looking to make my way back into the tech field as a web developer.
+      </p>
     </section>
-  </div>
+    <section class="light">
+      <h2>My projects</h2>
+      <p>
+        As a freelance web developer, I have built websites for small businesses to help establish their online
+        presence. I have built a photography website, a website for a hauling company, and a website for a
+        non-profit Christian ministry. I also have built a portfolio website to showcase these projects.
+      </p>
+      <h2>Accomplishments</h2>
+      <p>
+        I made the Dean's List at my university, Evangel University in Springfield, MO, and have held a 4.0 GPA.
+      </p>
+    </section>
+    <blockquote>
+      <p>The best way out is always through <br>-Robert Frost</p>
+    </blockquote>
+    <section class="left">
+      <h2>Work history</h2>
+      <h3>Freelance Web Developer</h3>
+      <p>
+        I build websites for small businesses using a mix of ASP.Net, Vue, React, and Angular. Depending on what
+        the client needs.
+      </p>
+      <h3>DevOps Developer at Merkle, Inc</h3>
+      <p>
+        I worked mainly in Operations, all while training with the best developers that worked at Merkle and growing
+        my skills as a professional developer.
+      </p>
+    </section>
+    <blockquote>
+      <p>Thank you for visiting my site!</p>
+    </blockquote>
+  </main>
 </template>
 
 <style scoped>
-body {
-  margin: 0;
+main {
+  width: 100vw;
+  color: white;
+  /* z-index: 99; */
+  position: absolute;
+  margin: 0px auto;
+  padding: 120px 0px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
-.wrapper::-webkit-scrollbar {
-  width: 0.8em;
+h1,
+h2,
+h3,
+blockquote {
+  font-weight: 700;
+  font-style: normal;
 }
 
-.wrapper::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-.wrapper::-webkit-scrollbar-thumb {
-  background-color: #AFA8BA;
-  border-radius: 35px;
-}
-
-.wrapper {
-  height: calc(100vh - 100px);
-  overflow: auto;
-  overflow-x: hidden;
-  perspective: 10px;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 header {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
-.background {
-  object-fit: fill;
-  width: 100%;
-  transform: translateZ(-10px) scale(2);
-}
-
-.foreground {
-  transform: translateZ(-5px) scale(1.5);
-  animation: fade-in 2.5s;
-}
-
-.background,
-.foreground {
-  position: absolute;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.title {
-  padding: 100px;
-  font-size: 7rem;
-  color: white;
-  text-shadow: 0 0 5px black;
-  text-transform: uppercase;
+  background: var(--dark-bg);
+  grid-column: 2 / span 5;
+  font-size: 2.5rem;
+  padding: 2rem;
+  margin-bottom: var(--space);
+  opacity: var(--transparency);
+  border-radius: var(--radius);
 }
 
 section {
-  font-size: 2rem;
-  padding: 2rem;
-  text-align: center;
+  grid-column: 2 / 8;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--space);
+  opacity: var(--transparency);
+  border-radius: var(--radius);
+}
+
+blockquote {
+  color: black;
   background-color: white;
-  color: black;
+  margin: 0;
+  padding: 25px;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--space);
+  border-radius: var(--radius);
+  opacity: var(--transparency);
 }
 
-.main-heading {
-  margin-bottom: 15px;
-  padding: 15px;
+blockquote p {
+  font-size: 4rem;
+  display: inline;
+  line-height: 1;
 }
 
-.skills-area,
-.edu-area {
-  margin-bottom: 15px;
-  padding: 15px;
+.left {
+  grid-column: 6 / 12;
 }
 
-.skills-heading,
-.edu-heading {
-  padding: 50px 200px;
-  border-radius: 25px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.763);
-  color: black;
-}
-
-.skills-img,
-.edu-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  min-height: 400px;
-  border-radius: 25px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-h3,
-h4 {
-  text-align: center;
-  color: black;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
+@media (max-width: 940px) {
+  header {
+    font-size: 1.5rem;
+    grid-column: 2 / span 10;
   }
 
-  100% {
-    opacity: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  .title {
-    font-size: 5rem;
+  blockquote p {
+    font-size: 2rem;
   }
 
-  .skills-heading {
-    padding: 50px 100px;
-    letter-spacing: 2px;
-  }
-
-  .edu-heading {
-    padding: 50px 70px;
-    letter-spacing: 2px;
-  }
-
-  .skills-img,
-  .edu-img {
-    background-attachment: scroll;
+  section,
+  .left {
+    grid-column: 2 / span 10;
   }
 }
 </style>

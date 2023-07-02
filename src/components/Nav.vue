@@ -32,6 +32,9 @@ onMounted(() => {
                         <RouterLink class="nav-link active" aria-current="page" to="/">Home</RouterLink>
                     </li>
                     <li class="nav-item me-2">
+                        <RouterLink class="nav-link" to="/skills">Skills</RouterLink>
+                    </li>
+                    <li class="nav-item me-2">
                         <RouterLink class="nav-link" to="/portfolio">Portfolio</RouterLink>
                     </li>
                     <li class="nav-item me-2">
