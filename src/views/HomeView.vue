@@ -1,4 +1,7 @@
 <script setup>
+import WorkHistory from '../components/WorkHistory.vue';
+import AboutMe from '../components/AboutMe.vue';
+import Projects from '../components/Projects.vue';
 import {
   Scene, PerspectiveCamera, WebGLRenderer, TorusKnotGeometry, MeshStandardMaterial, Mesh, PointLight, AmbientLight,
   TextureLoader
@@ -69,59 +72,23 @@ animate();
   <canvas ref="background"></canvas>
   <main>
     <header>
-      <h1>🎸 Chris McDonald 🎸</h1>
+      <h1>Chris McDonald</h1>
       <p>Welcome to my portfolio</p>
     </header>
     <blockquote>
       <p>"Because the world will never take my heart" - MCR</p>
     </blockquote>
     <section>
-      <h2>About me</h2>
-      <p>
-        I am a musician and have been one for 16 years. My instrument of choice is the guitar, but I can play piano,
-        drums, mandolin and whatever instrument I need to play to get the job done!
-      </p>
-      <p>
-        I first started building websites about 6 years ago after my dad suggested I look into a coding bootcamp
-        called the Arkansas Coding Academy. I went ahead and paid the money to attend and I loved it from the start.
-        The program was a 6-month course focusing on C#/SQL Web Development. By the end of the class we were very
-        proficient in building fully funcitonal web apps using the ASP.Net framework.
-      </p>
-      <p>
-        After a lot of work trying to get a job in the industry I finally got my break with a company called
-        Merkle, Inc. I started as an intern before finally being hired on in a full position as a DevOps Developer.
-        Sadly, after the events of 2020 and COVID-19 I was laid off from Merkle, Inc. After that I decided to
-        focus on creating music and focusing on learning about the Bible and returning to university. Now, I am
-        looking to make my way back into the tech field as a web developer.
-      </p>
+      <AboutMe></AboutMe>
     </section>
     <section class="light">
-      <h2>My projects</h2>
-      <p>
-        As a freelance web developer, I have built websites for small businesses to help establish their online
-        presence. I have built a photography website, a website for a hauling company, and a website for a
-        non-profit Christian ministry. I also have built a portfolio website to showcase these projects.
-      </p>
-      <h2>Accomplishments</h2>
-      <p>
-        I made the Dean's List at my university, Evangel University in Springfield, MO, and have held a 4.0 GPA.
-      </p>
+      <Projects></Projects>
     </section>
     <blockquote>
       <p>The best way out is always through <br>-Robert Frost</p>
     </blockquote>
     <section class="left">
-      <h2>Work history</h2>
-      <h3>Freelance Web Developer</h3>
-      <p>
-        I build websites for small businesses using a mix of ASP.Net, Vue, React, and Angular. Depending on what
-        the client needs.
-      </p>
-      <h3>DevOps Developer at Merkle, Inc</h3>
-      <p>
-        I worked mainly in Operations, all while training with the best developers that worked at Merkle and growing
-        my skills as a professional developer.
-      </p>
+      <WorkHistory></WorkHistory>
     </section>
     <blockquote>
       <p>Thank you for visiting my site!</p>
@@ -133,11 +100,12 @@ animate();
 main {
   width: 100vw;
   color: white;
-  /* z-index: 99; */
+  z-index: 99;
   position: absolute;
   margin: 0px auto;
   padding: 120px 0px;
   display: grid;
+  text-align: center;
   grid-template-columns: repeat(12, 1fr);
 }
 
@@ -147,6 +115,12 @@ h3,
 blockquote {
   font-weight: 700;
   font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
 }
 
 canvas {
@@ -201,10 +175,6 @@ blockquote p {
   header {
     font-size: 1.5rem;
     grid-column: 2 / span 10;
-  }
-
-  h1 {
-    font-size: 1rem;
   }
 
   blockquote p {
