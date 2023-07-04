@@ -44,7 +44,7 @@ scene.background = bgTexture;
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  let initialSet = 20;
+  let initialSet = 25;
 
   camera.position.z = t * -0.001 + initialSet;
   camera.position.x = t * -0.0002;
@@ -141,7 +141,8 @@ header {
   margin-bottom: var(--space);
   opacity: var(--transparency);
   border-radius: var(--radius);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
 }
 
 section {
@@ -153,7 +154,8 @@ section {
   margin-bottom: var(--space);
   opacity: var(--transparency);
   border-radius: var(--radius);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
 }
 
 blockquote {
@@ -165,7 +167,8 @@ blockquote {
   margin-bottom: var(--space);
   border-radius: var(--radius);
   opacity: var(--transparency);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
 }
 
 blockquote p {
@@ -179,21 +182,24 @@ blockquote p {
 }
 
 #skill-btn {
-  margin-top: 25px;
+  margin-top: 50px;
 }
 
 @media (max-width: 940px) {
   header {
     font-size: 1.5rem;
-    grid-column: 2 / span 10;
   }
 
   blockquote p {
     font-size: 2rem;
+    grid-column: 2 / span 10;
   }
 
+  header,
+  blockquote,
   section,
   .left {
+    box-shadow: var(--shadow-mobile);
     grid-column: 2 / span 10;
   }
 }
