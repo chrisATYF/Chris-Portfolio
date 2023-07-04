@@ -46,9 +46,9 @@ function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   let initialSet = 15;
 
-  camera.position.z = t * -0.01 + initialSet;
-  camera.position.x = t * -0.0002;
-  camera.position.y = t * -0.0002;
+  camera.position.z = t * -0.001 + initialSet;
+  camera.position.x = t * -0.00002;
+  camera.position.y = t * -0.00002;
 }
 
 document.body.onscroll = moveCamera;
@@ -57,9 +57,9 @@ moveCamera();
 function animate() {
   requestAnimationFrame(animate);
 
-  torusKnot.rotation.x += 0.01;
-  torusKnot.rotation.y += 0.005;
-  torusKnot.rotation.z += 0.01;
+  torusKnot.rotation.x += 0.001;
+  torusKnot.rotation.y += 0.0005;
+  torusKnot.rotation.z += 0.001;
 
   if (renderer) {
     renderer.render(scene, camera);
