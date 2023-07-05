@@ -93,10 +93,10 @@ animate();
     </section>
     <blockquote>
       <p>Thank you for visiting my site!</p>
-      <RouterLink to="/skills" id="skill-btn" class="btn btn-outline-dark btn-lg">
-        Click to view my skills
-      </RouterLink>
     </blockquote>
+    <RouterLink to="/skills" id="skill-btn" class="btn btn-outline-dark btn-lg">
+      Click to view my skills
+    </RouterLink>
   </main>
 </template>
 
@@ -139,7 +139,6 @@ header {
   font-size: 2.5rem;
   padding: 2rem;
   margin-bottom: var(--space);
-  opacity: var(--transparency);
   border-radius: var(--radius);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
@@ -152,7 +151,6 @@ section {
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: var(--space);
-  opacity: var(--transparency);
   border-radius: var(--radius);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
@@ -160,13 +158,12 @@ section {
 
 blockquote {
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.233);
   margin: 0;
   padding: 25px;
-  grid-column: 2 / span 9;
+  grid-column: 2 / span 10;
   margin-bottom: var(--space);
   border-radius: var(--radius);
-  opacity: var(--transparency);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
@@ -182,7 +179,13 @@ blockquote p {
 }
 
 #skill-btn {
-  margin-top: 50px;
+  margin: 0;
+  padding: 25px;
+  grid-column: 2 / span 10;
+  margin-bottom: var(--space);
+  border-radius: var(--radius);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
 }
 
 @media (max-width: 940px) {
