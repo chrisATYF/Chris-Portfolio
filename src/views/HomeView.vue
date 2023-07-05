@@ -140,6 +140,7 @@ header {
   padding: 2rem;
   margin-bottom: var(--space);
   border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
@@ -152,6 +153,7 @@ section {
   line-height: 1.5;
   margin-bottom: var(--space);
   border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
@@ -164,6 +166,7 @@ blockquote {
   grid-column: 2 / span 10;
   margin-bottom: var(--space);
   border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
@@ -184,6 +187,7 @@ blockquote p {
   grid-column: 2 / span 10;
   margin-bottom: var(--space);
   border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
 }
