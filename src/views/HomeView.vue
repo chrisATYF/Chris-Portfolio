@@ -158,7 +158,7 @@ section {
 
 blockquote {
   color: black;
-  background-color: rgba(255, 255, 255, 0.233);
+  background-color: rgba(255, 255, 255, 0.500);
   margin: 0;
   padding: 25px;
   grid-column: 2 / span 10;

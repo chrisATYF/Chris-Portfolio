@@ -10,12 +10,12 @@ import Nav from "./components/Nav.vue"
 
 <style>
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.32);
+  --dark-bg: rgba(15, 15, 15, 0.500);
   --space: 200px;
   --radius: 25px;
   --transparency: 0.65;
-  --shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.324);
-  --shadow-mobile: 2.5px 2.5px 5px 2.5px rgba(0, 0, 0, 0.324);
+  --shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.500);
+  --shadow-mobile: 2.5px 2.5px 5px 2.5px rgba(0, 0, 0, 0.500);
   font-weight: 400;
   font-style: normal;
 }
