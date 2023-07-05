@@ -1,8 +1,9 @@
 <template>
     <h2>About me</h2>
     <p>
-        I am a musician and have been one for 16 years. My instrument of choice is the guitar, but I can play piano,
-        drums, mandolin and whatever instrument I need to play to get the job done!
+        I am a web developer and a musician. I've been developing websites for about 6 years and I've been playing
+        guitar for 16 years. My instrument of choice is the guitar, but I can play piano, drums, mandolin and
+        whatever instrument I need to play to get the job done!
     </p>
     <p>
         I first started building websites about 6 years ago after my dad suggested I look into a coding bootcamp
